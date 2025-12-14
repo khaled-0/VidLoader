@@ -155,6 +155,16 @@ public final class VidLoader: VidLoadable {
         guard let item = activeItems[identifier] else { return .unknown }
         return item.state
     }
+    
+    public func itemInformation(for identifier: String) -> ItemInformation? {
+        guard let item = activeItems[identifier] else { return nil }
+        return item
+    }
+    
+    public func items() -> [ItemInformation] {
+        return Array(activeItems.values)
+    }
+
 
     public func asset(location: URL) -> AVURLAsset? {
         let urlAsset = AVURLAsset(url: location)
