@@ -26,7 +26,7 @@ public struct ItemInformation: Codable, Equatable {
     /// Item thumbnail that will be presented in the phone settings
     let artworkData: Data?
     /// Current item download progress
-    let progress: Double
+    public let progress: Double
     /// Tthe lowest media bitrate to be used that is greater than or equal to this value
     /// Value should be used as NSNumber in bits per second. If no suitable media bitrate is found, the highest media bitrate will be selected
     let minRequiredBitrate: Int?
